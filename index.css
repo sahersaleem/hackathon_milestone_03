@@ -299,14 +299,33 @@ img{
 
 
 @media (width<380px){
+    header{
+        overflow-x: hidden;
+    }
+    body{
+        overflow-x: hidden;
+    }
 .card-section div {
     width: 300px;
-  height: 200px;
+    height: auto;
+    padding: 20px;
 }
 
  form{
+    overflow-x: hidden;
     background-color: white;
 }
-
+.featured-section-content h1{
+    font-size: 20px;
+}
+.hero-section-content {
+    margin-top: 34px;
+}
+.logo{
+    font-size: 12px;
+}
+nav ul li{
+    font-size: 10px;
+}
 
 }
