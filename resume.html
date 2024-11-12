@@ -13,27 +13,31 @@
         <fieldset>
           <legend>Personal Information</legend>
 
-          <input type="name" placeholder="Enter your name" id="userName" />
+          <input type="name" placeholder="Enter your name" id="userName"  required/>
           <input
             type="email"
             placeholder="Enter your email-address"
             id="email"
+            required
           />
           <input
             type="number"
             placeholder="Enter your phone number"
             id="number"
+            required
           />
-          <input type="text" placeholder="Enter your address" id="address" />
+          <input type="text" placeholder="Enter your address" id="address" required />
           <input
             type="text"
             placeholder="Enter your Linkedin profile"
             id="linkedinProfile"
+            required
           />
           <input
           type="text"
           placeholder="Enter your bio"
           id="bio"
+          required
         />
 
 
@@ -55,6 +59,7 @@
               rows="3"
               placeholder="Write Summary"
               id="professional-summary"
+              required
             ></textarea>
           </div>
         </fieldset>
@@ -66,32 +71,37 @@
             type="text"
             placeholder="Enter your job company name"
             id="companyName"
+            required
           />
           <input
             type="text"
             placeholder="Enter your job company start date"
             id="startDate"
+            required
           />
           <input
             type="text"
             placeholder="Enter your job company end date"
             id="endDate"
+            required
           />
           <!-- Todo text box for achievment -->
         </fieldset>
         <fieldset>
           <legend>Education</legend>
-          <input type="text" placeholder="Enter your Degree" id="degree" />
-          <input type="text" placeholder="Enter your field" id="field" />
+          <input type="text" placeholder="Enter your Degree" id="degree" required/>
+          <input type="text" placeholder="Enter your field" id="field" required/>
           <input
             type="text"
             placeholder="Enter your school/university"
             id="institutionName"
+            required
           />
           <input
             type="text"
             placeholder="Enter your graduation date "
             id="date"
+            required
           />
         </fieldset>
 
@@ -105,6 +115,7 @@
                 type="text"
                 placeholder="Add skill"
                 id="skills"
+                required
               ></textarea>
               
             </div>
@@ -120,6 +131,7 @@
               type="text"
               placeholder="Add Language"
               id="language"
+              required
             ></textarea>
              
             </div>
@@ -133,11 +145,12 @@
             accept="image/png"
             placeholder="add image"
             id="image-upload"
+            required
           />
         </fieldset>
 
         <div class="image-div">
-          <img src="" id="image-preview" alt="image" />
+          <img src="" id="image-preview" alt="image" required />
         </div>
 
         <div class="generate-btn">
