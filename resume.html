@@ -9,92 +9,156 @@
   <body>
     <header class="heading"><h1>Generate Your Resume Here!</h1></header>
     <div class="form-container">
-    <form action="">
-      <fieldset>
-        <legend>Personal Information</legend>
+      <form action="">
+        <fieldset>
+          <legend>Personal Information</legend>
 
-        <input type="name" placeholder="Enter your name" id="userName"/>
-        <input type="email" placeholder="Enter your email-address" id="email"/>
-        <input type="number" placeholder="Enter your phone number" id="number" />
-        <input type="text" placeholder="Enter your address" id="address" />
-        <input type="text" placeholder="Enter your Linkedin profile" id="linkedinProfile"/>
-        
-      </fieldset>
+          <input type="name" placeholder="Enter your name" id="userName" />
+          <input
+            type="email"
+            placeholder="Enter your email-address"
+            id="email"
+          />
+          <input
+            type="number"
+            placeholder="Enter your phone number"
+            id="number"
+          />
+          <input type="text" placeholder="Enter your address" id="address" />
+          <input
+            type="text"
+            placeholder="Enter your Linkedin profile"
+            id="linkedinProfile"
+          />
+          <input
+          type="text"
+          placeholder="Enter your bio"
+          id="bio"
+        />
 
-      <fieldset
-        name="Professional Summary
+
+
+
+
+
+        </fieldset>
+
+        <fieldset
+          name="Professional Summary
       "
-      >
-        <legend>Professional Summary</legend>
+        >
+          <legend>Professional Summary</legend>
 
-        <div>
-          <textarea cols="8" rows="3" placeholder="Write Summary"></textarea>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Work experience</legend>
+          <div>
+            <textarea
+              cols="8"
+              rows="3"
+              placeholder="Write Summary"
+              id="professional-summary"
+            ></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Work experience</legend>
 
-        <input type="text" placeholder="Enter your job title" id="jobTitle"  />
-        <input type="text" placeholder="Enter your job company name" id="companyName"/>
-        <input type="text" placeholder="Enter your job company start date" id="startDate" />
-        <input type="text" placeholder="Enter your job company end date" id="endDate" />
-        <!-- Todo text box for achievment -->
-      </fieldset>
-      <fieldset>
-        <legend>Education</legend>
-        <input type="text" placeholder="Enter your Degree" id="degree" />
-        <input type="text" placeholder="Enter your field"  id="field"/>
-        <input type="text" placeholder="Enter your school/university" id="institutionName"/>
-        <input type="text" placeholder="Enter your graduation date " id="date"/>
-      </fieldset>
+          <input type="text" placeholder="Enter your job title" id="jobTitle" />
+          <input
+            type="text"
+            placeholder="Enter your job company name"
+            id="companyName"
+          />
+          <input
+            type="text"
+            placeholder="Enter your job company start date"
+            id="startDate"
+          />
+          <input
+            type="text"
+            placeholder="Enter your job company end date"
+            id="endDate"
+          />
+          <!-- Todo text box for achievment -->
+        </fieldset>
+        <fieldset>
+          <legend>Education</legend>
+          <input type="text" placeholder="Enter your Degree" id="degree" />
+          <input type="text" placeholder="Enter your field" id="field" />
+          <input
+            type="text"
+            placeholder="Enter your school/university"
+            id="institutionName"
+          />
+          <input
+            type="text"
+            placeholder="Enter your graduation date "
+            id="date"
+          />
+        </fieldset>
 
-      <fieldset>
-        <legend>Skills</legend>
-        <div id="skill-container">
-          <div class="skill-div">
-            <input
-              name="skillInputList[]"
+        <fieldset>
+          <legend>Skills</legend>
+          <div id="skill-container">
+            <div class="skill-div">
+              <textarea
+                cols="20"
+                rows="8"
+                type="text"
+                placeholder="Add skill"
+                id="skills"
+              ></textarea>
+              
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Language</legend>
+          <div id="language-container">
+            <div class="language-div">
+              <textarea
+              cols="20"
+              rows="8"
               type="text"
-              placeholder="Add skill"
-              id="skills"
-            />
-            <button class="btn" onclick="addSkill()" type="button">
-              Add Skill
-            </button>
+              placeholder="Add Language"
+              id="language"
+            ></textarea>
+             
+            </div>
           </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Image</legend>
+          <input
+            type="file"
+            accept="image/png"
+            placeholder="add image"
+            id="image-upload"
+          />
+        </fieldset>
+
+        <div class="image-div">
+          <img src="" id="image-preview" alt="image" />
         </div>
-      </fieldset>
-      <fieldset>
-        <legend>Language</legend>
-        <div id="language-container">
-          <div class="language-div">
-            <input name="languageList[]" type="text" placeholder="Add skill" id="language" />
-            <button class="btn" type="button" onclick="addLanguage()">
-              Add Language
-            </button>
-          </div>
+
+        <div class="generate-btn">
+          <button id="Generate-Pdf" type="button" onClick="generateResume()">
+            Generate Resume
+          </button>
         </div>
-      </fieldset>
+      </form>
 
-      <fieldset>
-        <legend>Image</legend>
-        <input type="file" accept="image/png" placeholder="add image" id="image-upload"/>
-      </fieldset>
-
-
-      <div class="image-div">
-        <img src="" id="image-preview" alt="image"/>
-
-      </div>
-  
-<div class="generate-btn"><button id="Generate-Pdf" type="button" onClick="generateResume()">Generate Resume</button></div>
-      
-    </form>
-  
-        <div id="resume-container">
-         
-        </div>
-     </div>
+      <div id="resume-container"></div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+

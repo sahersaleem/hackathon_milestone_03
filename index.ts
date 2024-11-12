@@ -1,36 +1,4 @@
-function addSkill() {
-  const skillContainer = document.getElementById("skill-container");
-
-  // Create input div
-  const skillDiv = document.createElement("div");
-  skillDiv.classList.add("skill-div");
-
-  // Create  input element
-  const skillInput = document.createElement("input");
-  skillInput.type = "text";
-  skillInput.name = "skillInputList[]";
-  skillInput.placeholder = "Add skill";
-
-  skillDiv.appendChild(skillInput);
-
-  skillContainer?.appendChild(skillDiv);
-}
-
-function addLanguage() {
-  const languageContainer = document.getElementById("language-container");
-  const languageDiv = document.createElement("div");
-  languageDiv.classList.add("language-div");
-
-  const languageInput = document.createElement("input");
-  languageInput.type = "text";
-  languageInput.name = "languageList[]";
-  languageInput.placeholder = "Add language";
-
-  languageDiv.appendChild(languageInput);
-  languageContainer?.appendChild(languageDiv);
-}
-
-document.getElementById("image-upload")?.addEventListener('change', (e) => {
+document.getElementById("image-upload")?.addEventListener("change", (e) => {
   const fileInput = e.target as HTMLInputElement;
 
   if (fileInput.files && fileInput.files[0]) {
@@ -77,72 +45,91 @@ function generateResume() {
   const institutionName = (
     document.getElementById("institutionName") as HTMLInputElement
   ).value;
+  const professionalSummary = (
+    document.getElementById("professional-summary") as HTMLTextAreaElement
+  ).value;
+
   const date = (document.getElementById("date") as HTMLInputElement).value;
-  const skills = (document.getElementById("skills") as HTMLInputElement).value;
-  const language = (document.getElementById("language") as HTMLInputElement)
+  const skills = (document.getElementById("skills") as HTMLTextAreaElement)
     .value;
 
-  const resumeContent = `
+  //   const skiilsDiv = document.getElementById('skillsDiv') as HTMLDivElement
 
+  // const skillsArray = skills.split(',').map((skill)=>skill.trim())
+  //   const skillsUl = document.createElement('skill-ul') as HTMLUListElement
+
+  //  skillsArray.forEach((skill)=>{
+  //       console.log(skill)
+  //     const list = document.createElement('li') as HTMLLIElement
+  //        list.innerText=skill
+  //        skillsUl.appendChild(list)
+
+  //     })
+  //     skiilsDiv?.appendChild(skillsUl)
+
+  const language = (document.getElementById("language") as HTMLTextAreaElement)
+    .value;
+  const bio = (document.getElementById("bio") as HTMLInputElement).value;
+  const resumeContent = `   
     <div class="first-part">
-     <div class="image-div">
-     <img src="${document
-       .getElementById("image-preview")
-       ?.getAttribute("src")}" alt="profile-image"/>
-     
-     </div>
-     <div class="first-div-content">  
-    
-     <h1>${userName}</h1>
-     
+  <div class="image-div">
+    <img src="${document
+     .getElementById("image-preview")
+     ?.getAttribute("src")}" alt="profile-image"/>
     </div>
+      <div>
+          <h1>${userName}</h2>
+            <p>${bio}</p>
+             </div>
+           </div>
+
 <div class="second-part">
+<div class="first-section">
 
-<p>${email}</p>
-<p>${phoneNumber}</p>
-<p>${linkedinUrl}</p>
-<p>${address}</p>
+<div><h1>Contact information</h1>
+  <p>${email}</p>
+ <p>${phoneNumber}</p>
+  <p>${linkedinUrl}</p>
+  <p>${address}</p>
+</div>
 
+<div>
+<h1>Education</h1>
+<p><span>Degree:</span> ${degree}</p>
+<p><span><Field:</span>${field}</p>
+<p><span> Institution:</span> ${institutionName}</p>
+<p><span>Date:</span>${date}</p>
+</div>
 
+<div>
+<h1>Languages</h1>
+<p><p>${language}</p></p>
+</div>
+
+<div>
+<h1>Skills</h1>
+<p>${skills}</p>
+</div>
 
 
 </div>
 
+<div class="second-section">
+<div class="professionalSummary">
+<h1>Professional Summary</h1>
+<p><p>${professionalSummary}</p></p>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
+<div>
+<h1>Work Experience</h1>
+<p><span>Job title:</span>${jobTitle}</p>
+<p><span>Comany name:</span>${companyName}</p>
+<p><span>Start date:</span>${startDate}</p>
+<p><span>End date:</span>${enddate}</p>
+</div>
+</div>
+</div>
 
 `;
 
