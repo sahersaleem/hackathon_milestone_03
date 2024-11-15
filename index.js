@@ -59,3 +59,6 @@ function generateResume() {
         resumeContainer.style.display = "block";
     }
 }
+function printPdf() {
+    window.print();
+}

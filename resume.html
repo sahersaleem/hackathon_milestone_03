@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume</title>
     <link rel="stylesheet" href="/resume.css" />
+    <style>
+      /* Default styles for the webpage */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+
+      /* This rule will apply when the user triggers print */
+      @media print {
+        body {
+          font-family: Times, serif;
+        }
+
+        .no-print {
+          display: none; /* Hide elements with the .no-print class */
+        }
+
+        /* You can ensure background colors and images appear in print */
+        @page {
+          size: A4;
+          margin: 20mm;
+        }
+      }
+      </style>
   </head>
   <body>
     <header class="heading"><h1>Generate Your Resume Here!</h1></header>
@@ -160,9 +184,15 @@
         </div>
       </form>
 
-      <div id="resume-container"></div>
-    </div>
+      <!-- <div id="resume-container"></div>
+      <button id="print-pdf" type="button" onClick="printPdf()">
+        Download pdf
+      </button>
+      
+    </div> -->
     <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    
   </body>
 </html>
 

@@ -74,8 +74,8 @@ function generateResume() {
     <div class="first-part">
   <div class="image-div">
     <img src="${document
-     .getElementById("image-preview")
-     ?.getAttribute("src")}" alt="profile-image"/>
+      .getElementById("image-preview")
+      ?.getAttribute("src")}" alt="profile-image"/>
     </div>
       <div>
           <h1>${userName}</h2>

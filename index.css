@@ -315,6 +315,12 @@ img{
     overflow-x: hidden;
     background-color: white;
 }
+
+.featured-section{
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
 .featured-section-content h1{
     font-size: 20px;
 }
@@ -327,5 +333,7 @@ img{
 nav ul li{
     font-size: 10px;
 }
-
+footer{
+    overflow-x: hidden;
+}
 }
